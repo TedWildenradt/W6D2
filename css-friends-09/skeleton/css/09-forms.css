@@ -1,1 +1,27 @@
 /* PHASE 9: Forms */
+.special-friend {
+  float: left;
+  border: 1px green solid; 
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  border: 1px red solid; 
+  width: 500px;
+  height: 600px;
+  background-color: lightgrey; 
+}
+
+.container::after {
+  content: "";
+   clear: both;
+   display: table;
+   
+}
+
+.input-area {
+  border: 1px green solid; 
+  background-color: white;
+}
