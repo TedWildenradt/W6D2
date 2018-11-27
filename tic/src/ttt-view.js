@@ -25,6 +25,7 @@ class View {
     $("li").on("click", function() {
       
     });
+    this.game.swapTurn();
     
   }
 
