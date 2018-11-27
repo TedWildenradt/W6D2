@@ -15,7 +15,18 @@ class View {
     }));
   }
 
-  makeMove($square) {}
+  makeMove($square) {
+    let playersMark = this.game.currentPlayer;
+    // debugger
+    $square.addClass('selected');
+    $square.html(playersMark);
+    // this.game.board.placeMark($square.pos, game.currentPlayer.mark);
+    
+    $("li").on("click", function() {
+      
+    });
+    
+  }
 
   setupBoard() {
     const $ul = $("<ul>");
@@ -23,7 +34,7 @@ class View {
     for (var rowIdx = 0; rowIdx < 3; rowIdx++) {
       for (var colIdx = 0; colIdx < 3; colIdx++) {
         let $li = $("<li>");
-        $li.addClass('square')
+        $li.addClass('square');
         $li.data("pos", [rowIdx, colIdx]);
         $ul.append($li);
       }
