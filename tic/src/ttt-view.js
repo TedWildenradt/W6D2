@@ -21,11 +21,17 @@ class View {
     $square.addClass('selected');
     $square.html(playersMark);
     // this.game.board.placeMark($square.pos, game.currentPlayer.mark);
+    const pos = $square.data('pos');
+    // $("li").on("click", function() {
+    // 
+    // });
+    // this.game.swapTurn();
+    this.game.playMove(pos);
+    if (this.game.isOver()) {
+      let $body = $('body');
+      $body.append('<h1>Game Over</h1>');
+    }
     
-    $("li").on("click", function() {
-      
-    });
-    this.game.swapTurn();
     
   }
 
