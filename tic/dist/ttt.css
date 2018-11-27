@@ -23,9 +23,21 @@ li {
   border: 10px solid black;
   width: 180px;
   margin: 0px;
-  background: lightgray;
+  background: gray;
+  font-size: 200px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+  
+  
 }
 
 .square:hover {
   background: pink;
+}
+
+.selected {
+  background-color: white;
 }
