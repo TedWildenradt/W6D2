@@ -1,0 +1,20 @@
+ul {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  flex-wrap: wrap;
+  border: black 20px solid;
+  list-style: none;
+  margin: auto;
+  padding-left: 0;
+  
+}
+
+li {
+  height: 180px;
+  border: 10px solid black;
+  width: 180px;
+  margin: 0px;
+  
+  
+}
