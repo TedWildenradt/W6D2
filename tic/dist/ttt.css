@@ -1,9 +1,17 @@
+h1 {
+  margin: auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 120px;
+  font-family: sans-serif;
+}
+
 ul {
   display: flex;
   width: 600px;
   height: 600px;
   flex-wrap: wrap;
-  border: black 20px solid;
+  border: black 10px solid;
   list-style: none;
   margin: auto;
   padding-left: 0;
@@ -15,6 +23,9 @@ li {
   border: 10px solid black;
   width: 180px;
   margin: 0px;
-  
-  
+  background: lightgray;
+}
+
+.square:hover {
+  background: pink;
 }
