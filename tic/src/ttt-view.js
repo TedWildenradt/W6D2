@@ -8,12 +8,26 @@ class View {
     this.makemove();
   }
 
-  bindEvents() {}
+  bindEvents() {
+    this.$el.on("click", "li", ( event =>{
+      const $square = $(event.currentTarget);
+      this.makeMove($square);
+    }));
+  }
 
   makeMove($square) {}
 
   setupBoard() {
+    const $ul = $("<ul>");
     
+    for (var rowIdx = 0; rowIdx < 3; rowIdx++) {
+      for (var colIdx = 0; colIdx < 3; colIdx++) {
+        let $li = $("<li>");
+        $li.data("pos", [rowIdx, colIdx]);
+        $ul.append($li);
+      }
+    }
+    this.$el.append($ul);
   }
 }
 
