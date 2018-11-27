@@ -115,7 +115,7 @@ eval("const Board = __webpack_require__(/*! ./board */ \"./src/board.js\");\ncon
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\")\nconst Game = __webpack_require__(/*! ./game.js */ \"./src/game.js\")\n\n  $(() => {\n    // Your code here\n  });\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\");\nconst Game = __webpack_require__(/*! ./game.js */ \"./src/game.js\");\n\n  $(() => {\n    const $figure = $(\".ttt\");\n    const game = new Game();\n    new View(game, $figure);\n  });\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
