@@ -23,6 +23,7 @@ class View {
     for (var rowIdx = 0; rowIdx < 3; rowIdx++) {
       for (var colIdx = 0; colIdx < 3; colIdx++) {
         let $li = $("<li>");
+        $li.addClass('square')
         $li.data("pos", [rowIdx, colIdx]);
         $ul.append($li);
       }
