@@ -104,7 +104,7 @@ eval("class Game {\n  constructor() {\n    this.towers = [[3, 2, 1], [], []];\n 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const View = __webpack_require__(/*! ./toh-view.js */ \"./src/toh-view.js\");\nconst Game = __webpack_require__(/*! ./game.js */ \"./src/game.js\");\n\n$( () => {\n  const rootEl = $('.hanoi');\n  const game = new HanoiGame();\n  new HanoiView(game, rootEl);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("const View = __webpack_require__(/*! ./toh-view.js */ \"./src/toh-view.js\");\nconst Game = __webpack_require__(/*! ./game.js */ \"./src/game.js\");\n\n$( () => {\n  const $rootEl = $('.toh');\n  const game = new Game();\n  new View(game, $rootEl);\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("const View = __webpack_require__(/*! ./toh-view.js */ \"./src/toh-view.js\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\nclass View {\n  constructor(game, $el) {\n    this.game = game; \n    this.$el = $el; \n    \n    this.setupBoard();\n    this.bindEvents();\n    this.makemove();\n  }\n  \n  bindEvents() {\n    this.$el.on(\"click\", \"li\", ( event =>{\n      const $square = $(event.currentTarget);\n      this.makeMove($square);\n    }));\n  }\n  \n  \n}\n\n\n\n\n\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/toh-view.js?");
+eval("\nclass View {\n  constructor(game, $el) {\n    this.game = game; \n    this.$el = $el; \n    \n    this.setupBoard();\n    this.bindEvents();\n    this.makemove();\n    \n    \n  }\n  \n  bindEvents() {\n    this.$el.on(\"click\", \"li\", ( event =>{\n      const $square = $(event.currentTarget);\n      this.makeMove($tower);\n    }));\n  }\n  \n  makeMove($tower) {\n    \n  }\n  \n  \n  setupBoard() {\n    const $ul = $(\"<ul>\");\n\n    for (var towerIdx = 0; towerIdx < 3; towerIdx++) {\n      let $li = $(\"<li>\");\n      $li.addClass('tower');\n      $li.data(\"pos\", towerIdx);\n      $ul.append($li);\n    }\n    \n    this.$el.append($ul);\n  }\n}\n\n\n\n\n\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/toh-view.js?");
 
 /***/ })
 
