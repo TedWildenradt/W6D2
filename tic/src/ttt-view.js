@@ -20,6 +20,7 @@ class View {
     // debugger
     $square.addClass('selected');
     $square.html(playersMark);
+    $square.addClass(playersMark);
     // this.game.board.placeMark($square.pos, game.currentPlayer.mark);
     const pos = $square.data('pos');
     // $("li").on("click", function() {
@@ -29,7 +30,17 @@ class View {
     this.game.playMove(pos);
     if (this.game.isOver()) {
       let $body = $('body');
-      $body.append('<h1>Game Over</h1>');
+      // $body.append('<h1>Game Over</h1>');
+      // debugger
+      let $winner = $('.' + playersMark);
+      // debugger
+      // forEach($el => $el.addClass('winner-winner'));
+      for (var i = 0; i < $winner.length; i++) {
+        // debugger
+        $($winner[i]).addClass('winner-winner');
+      }
+      $body.append(`<h2>Game Over ${this.game.winner()}, Wins!</h2>`);
+      
     }
     
     

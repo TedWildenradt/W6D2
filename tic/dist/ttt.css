@@ -35,10 +35,26 @@ li {
   
 }
 
+
+h2 {
+  margin: auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 80px;
+  font-family: sans-serif;
+}
+
 .square:hover {
   background: pink;
 }
 
 .selected {
   background-color: white;
+}
+
+
+
+
+.winner-winner {
+  background: green;
 }
